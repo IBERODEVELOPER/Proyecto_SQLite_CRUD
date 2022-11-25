@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/edtcodigo"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:hint="CODIGO"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtprecio"
+        android:layout_width="386dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="PRECIO"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtdescripcion" />
+
+    <Button
+        android:id="@+id/btndelete"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:hint="Eliminar"
+        android:onClick="eliminarCodigo"
+        app:icon="@drawable/btndeleteicon"
+        app:layout_constraintEnd_toStartOf="@+id/btnupdate"
+        app:layout_constraintStart_toEndOf="@+id/btndescrip"
+        app:layout_constraintTop_toBottomOf="@+id/edtprecio"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:hint="Eliminar"
+        android:onClick="ActualizarCodigo"
+        app:icon="@drawable/btnupdateicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btndelete"
+        app:layout_constraintTop_toBottomOf="@+id/edtprecio"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnfind"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Buscar x Cod"
+        android:onClick="BuscarCodigo"
+        app:icon="@drawable/btnfindicon"
+        app:layout_constraintEnd_toStartOf="@+id/btndescrip"
+        app:layout_constraintStart_toEndOf="@+id/btnsave"
+        app:layout_constraintTop_toBottomOf="@+id/edtprecio"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/botones"
+        android:hint="Guardar"
+        android:onClick="Guardar"
+        app:icon="@drawable/ic_baseline_save_24"
+        app:layout_constraintEnd_toStartOf="@+id/btnfind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtprecio"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btndescrip"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:hint="Buscar x Des"
+        android:onClick="BuscarDescr"
+        app:icon="@drawable/btndescriptionicon"
+        app:layout_constraintEnd_toStartOf="@+id/btndelete"
+        app:layout_constraintStart_toEndOf="@+id/btnfind"
+        app:layout_constraintTop_toBottomOf="@+id/edtprecio"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/edtdescripcion"
+        android:layout_width="384dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="DESCRIPCIÓN"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtcodigo" />
+
+    <Button
+        android:id="@+id/btnverdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:onClick="VerDatos"
+        android:text="VER DATOS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btndescrip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

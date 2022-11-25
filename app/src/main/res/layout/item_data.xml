@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tbrowreg"
+    android:layout_width="409dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvcodigo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvdescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvprecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:text="TextView" />
+
+
+</TableRow>
